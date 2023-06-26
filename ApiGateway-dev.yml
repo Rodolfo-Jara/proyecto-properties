@@ -23,6 +23,13 @@ spring:
           predicates:
             - Path=/calificacion/**
 
+             - id: ApiAuth
+          uri: lb://ApiAuth
+          predicates:
+            - Path=/auth/**,/role/**
+
+            
+
 
 eureka:
   instance:
